@@ -1450,7 +1450,7 @@
 						var uPass = passwordVar.val();
 						if(uPass!="" && uName!=""){
 						
-						var productServiceUrl = 'http://116.72.253.58/ChildNet1/controller.asmx?Method=getAssignedCaseList'; // Preferably write this out from server side
+						/*var productServiceUrl = 'http://116.72.253.58/ChildNet1/controller.asmx?Method=getAssignedCaseList'; // Preferably write this out from server side
 
 						var loginXml = "<?xml version='1.0' encoding='UTF-8' standalone='yes'?><mobileLogonForm><username>"+uName+"</username><password>"+uPass+"</password></mobileLogonForm>";
 						
@@ -1471,8 +1471,8 @@
 									  //contentNewsVar.html(tmpTxt);
 									  //showNews();
 								}
-							});
-							/*$.ajax({ url: "login.php",
+							});*/
+							$.ajax({ url: "login.php",
 									 type : "POST",
 									 data: {user : uName , password : uPass}, success: function(msg){
 									if(msg == "success"){
@@ -1481,7 +1481,7 @@
 										displayErrorMessage("Please fill correct username and password.");
 									}
 								}
-							});*/
+							});
 							
 						}else{
 							displayErrorMessage("Please fill both username and password field.")
