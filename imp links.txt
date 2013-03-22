@@ -1,0 +1,37 @@
+
+http://stackoverflow.com/questions/704855/software-design-vs-software-architecture
+
+
+/// ajax  documentation
+http://jquerymobile.com/demos/1.0a1/experiments/api-viewer/docs/jQuery.ajax/index.html
+
+
+
+///// Cross Browser Links
+
+error : XMLHttpRequest cannot load http://116.72.253.58/ChildNet1/controller.asmx?Method=getAssignedCaseList. Origin http://localhost is not allowed by Access-Control-Allow-Origin. 
+
+
+http://leonidius2010.wordpress.com/2011/05/16/98/
+http://www.ibm.com/developerworks/webservices/library/ws-wsajax/
+http://stackoverflow.com/questions/7459965/soap-ajax-cross-domain-problem
+http://openlandscape.net/2009/09/25/call-soap-xm-web-services-with-jquery-ajax/
+http://forums.asp.net/t/1711966.aspx/1
+http://eureka.ykyuen.info/2011/05/05/php-send-a-soap-request-by-curl/
+
+
+http://www.w3schools.com/ajax/ajax_xmlhttprequest_create.asp
+http://www.html5rocks.com/en/tutorials/cors/
+http://www.nczonline.net/blog/2010/05/25/cross-domain-ajax-with-cross-origin-resource-sharing/
+http://remysharp.com/2011/04/21/getting-cors-working/
+http://docs.aws.amazon.com/AmazonS3/latest/dev/cors.html
+
+http://ajamyajax.com/phonegap.html
+https://gist.github.com/burninghat/3235028
+http://www.w3schools.com/ajax/ajax_xmlhttprequest_send.asp
+https://developer.mozilla.org/en-US/docs/HTTP/Access_control_CORS?redirectlocale=en-US&redirectslug=HTTP_access_control
+http://benalman.com/projects/php-simple-proxy/
+http://benalman.com/code/projects/php-simple-proxy/examples/simple/
+
+http://www.bennadel.com/blog/2327-Cross-Origin-Resource-Sharing-CORS-AJAX-Requests-Between-jQuery-And-Node-js.htm
+http://www.bennadel.com/blog/1730-Building-Single-Page-Applications-Using-jQuery-And-ColdFusion-With-Ben-Nadel-Video-Presentation-.htm
