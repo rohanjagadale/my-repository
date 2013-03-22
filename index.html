@@ -40,7 +40,13 @@
 			try {
 				$(function() {
 					$("#submitLogin").click(function(){
-						alert("Thanks for login");
+						var username = $("#username").val();
+						var password = $("#password").val();
+						if(password != "" && username != ""){
+							alert("Thank you "+username + " for login." );
+						}else{
+							alert("Please provid both username and password");
+						}
 					});
 				});
 			} catch (error) {
