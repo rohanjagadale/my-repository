@@ -13,8 +13,21 @@
 		
 		<!-- For simple dialog alert -->
 		<script type="text/javascript" src="http://dev.jtsage.com/cdn/simpledialog/latest/jquery.mobile.simpledialog2.js"></script>
+		
+		<!-- Start of date time picker js-->
+		<script src="js/mobiscroll.core.js"></script>
+		<script src="js/mobiscroll.datetime.js"></script>
+		<script src="js/mobiscroll.select.js"></script>
+		<script src="js/mobiscroll.jqm.js" type="text/javascript"></script>
+		<!-- End of date time picker js-->
+		
+		<!-- Start of date time picker css-->
+		<link href="css/mobiscroll.jqm.css" rel="stylesheet" type="text/css" />
+		<link href="css/mobiscroll.core.css" rel="stylesheet" type="text/css" />
+		<link href="css/mobiscroll.sense-ui.css" rel="stylesheet" type="text/css" />
+		<link href="css/mobiscroll.wp.css" rel="stylesheet" type="text/css" />
+		<!-- End of date time picker css-->
 	</head>
-	
 	<body>
 		<!-- Container page -->
 		<div data-role="page" id="page1" data-theme="c">
@@ -213,9 +226,44 @@
 		<script>
 			var selectCaseVar			= $("#selectCase");
 			var selectParticipantVar	= $("#selectParticipant");
+			var curr = new Date().getFullYear();
+            var opt = {
+                'date': {
+                    preset: 'date',
+                    dateOrder: 'd Dmmyy',
+                    invalid: { daysOfWeek: [0, 6], daysOfMonth: ['5/1', '12/24', '12/25'] }
+                },
+                'datetime': {
+                    preset: 'datetime',
+                    minDate: new Date(2012, 3, 10, 9, 22),
+                    maxDate: new Date(2014, 7, 30, 15, 44),
+                    stepMinute: 5
+                },
+                'time': {
+                    preset: 'time'
+                },
+                'credit': {
+                    preset: 'date',
+                    dateOrder: 'mmyy',
+                    dateFormat: 'mm/yy',
+                    startYear: curr,
+                    endYear: curr + 10,
+                    width: 100
+                },
+                'select': {
+                    preset: 'select'
+                },
+                'select-opt': {
+                    preset: 'select',
+                    group: true,
+                    width: 50
+                }
+            }
 			
 			try {
 				$(function() {
+					/* Start of Page 1 Events */
+					
 					$("#submitLogin").click(function(){
 						var username = $("#username").val().toLowerCase();
 						var password = $("#password").val().toLowerCase();
@@ -248,7 +296,9 @@
 							//alert("Please provide both username and password");
 						}
 					});
+					/* End of Page 1 Events */
 					
+					/* Start of Page 2 Events */
 					$("#submitCaseParicipant").click(function(){
 						var selectCaseValue 		= selectCaseVar.val();
 						var selectParticipantValue 	= selectParticipantVar.val();
@@ -284,6 +334,16 @@
 						
 					});
 				});
+				/* End of Page 2 Events */
+				/* Start of Common Events */
+				$('.demo-test-date').scroller('destroy').scroller($.extend(opt['date'], {
+					theme: 'jqm',
+					mode: 'mixed',
+					lang: '',
+					display: 'modal',
+					animate: ''
+				}));
+				/* End of Common Events */
 			} catch (error) {
 				console.error("Your javascript has an error: " + error);
 			}
