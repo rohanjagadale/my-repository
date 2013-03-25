@@ -43,7 +43,23 @@
 						var username = $("#username").val();
 						var password = $("#password").val();
 						if(password != "" && username != ""){
-							alert("Thank you "+username + " for login." );
+							
+							var wsUrl = "http://116.72.253.58/ChildNet1/controller.asmx?Method=getAssignedCaseList";
+						
+							var loginXml = "<?xml version='1.0' encoding='UTF-8' standalone='yes'?><mobileLogonForm><username>"+username+"</username><password>"+password+"</password></mobileLogonForm>";
+						
+							var InputXML ="<?xml version='1.0' encoding='UTF-8' standalone='yes'?><assignedCaseListInputForm><loginId>SL10017</loginId></assignedCaseListInputForm>";
+						
+							//alert("Thank you "+username + " for login." );
+							$.ajax({
+								type: "POST",
+								url: wsUrl,
+								contentType: "text/xml",
+								dataType: "xml",
+								data: {LoginXML : loginXml , InputXML : InputXML},
+								success: processSuccess,
+								error: processError
+							});
 						}else{
 							alert("Please provide both username and password");
 						}
@@ -52,6 +68,15 @@
 			} catch (error) {
 				console.error("Your javascript has an error: " + error);
 			}
+			
+			function processSuccess(data, status, req) {
+				if (status == "success")
+					//$("#response").text($(req.responseXML).find("HelloResult").text());
+					alert("success "+req.responseText + " " + status);
+			}
+			function processError(data, status, req) {
+				alert(req.responseText + " " + status);
+			}  
 		</script>
 	</body>
 </html>
