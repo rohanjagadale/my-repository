@@ -371,6 +371,17 @@
 					});
 				/* End of Page 2 Events */
 				/* Start of Common Events */
+				
+				var initialScreenSize = window.innerHeight;
+				window.addEventListener("resize", function() {
+					if(window.innerHeight < initialScreenSize){
+						$("[data-role=footer]").hide();
+					}
+					else{
+						$("[data-role=footer]").show();
+					}
+				});
+				
 				$('.demo-test-date').scroller('destroy').scroller($.extend(opt['date'], {
 					theme: 'jqm',
 					mode: 'mixed',
