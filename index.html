@@ -10,6 +10,9 @@
 		<!-- <script src="css-js/jquery.mobile.demos.js"></script> -->
 		<link href="css-js/mobiscroll.jqm.css" rel="stylesheet" type="text/css" />
 		<script type="text/javascript" src="css-js/modernizr-latest.js"></script>
+		
+		<!-- For simple dialog alert -->
+		<script type="text/javascript" src="http://dev.jtsage.com/cdn/simpledialog/latest/jquery.mobile.simpledialog2.js"></script>
 	</head>
 	
 	<body>
@@ -36,19 +39,194 @@
 			<div data-role="footer">
 			</div>
 		</div>
+		
+		<div data-role="page" id="page2" data-theme="c">
+			<!-- Header -->
+			<div data-role="header">
+				<h1> Exit Enterview </h1>
+			</div>
+			<!-- Content -->
+			<div data-role="content" id="login_content">
+				<div name="case-participant-content-heading">
+					<label for="caseParticipant">Select Case Participant</label>
+				</div>
+				<div name="select-inputs">
+					<label for="caseSelect"> Select Case</label>
+					<div id="caseIdDiv" data-role="fieldcontain">
+						<select name="selectCase" id="selectCase">
+							<option value=""> Select Case </option>
+							<option value="case1"> Case1 </option>
+							<option value="case2"> Case2 </option>
+							<option value="case3"> Case3 </option>
+							<option value="case4"> Case4 </option>
+						</select>
+					</div>
+					<br/>
+					<label for="participantSelect">Select Participant</label>
+					<div id="paricipantIdDiv" data-role="fieldcontain">
+						<select name="selectParticipant" id="selectParticipant">
+							<option value=""> Select Participant </option>
+							<option value="paricipant1"> Participant1 </option>
+							<option value="paricipant2"> Participant2 </option>
+							<option value="paricipant3"> Participant3 </option>
+							<option value="paricipant4"> Participant4 </option>
+						</select>
+					</div>
+					<a href="" id="submitCaseParicipant" data-role="button">Submit</a> 
+				</div>
+			</div>
+			<!-- Footer -->
+			<div data-role="footer">
+			</div>
+		</div>
+		<div data-role="page" id="page3" data-theme="c">
+			<!-- Header -->
+			<div data-role="header">
+				<h1> Demographic Form </h1>
+			</div>
+			<!-- Content -->
+			<div data-role="content" id="login_content">
+				<div class="questionAnswer">
+					<div class="question">
+						<label for="text-1">Child’s Name:</label>
+					</div>
+					<div class="answer">
+						<input type="text" name="childName" id="childName" value=""/>
+					</div>
+				</div>
+				<div class="questionAnswer">
+					<div class="question">
+						<label for="text-1">DOB:</label>
+					</div>
+					<div class="answer">
+						<input name="date_dob" id="date_dob" class="demo-test-date" />
+					</div>
+				</div>
+				<div class="questionAnswer">
+					<div class="question">
+						<label for="text-1">Date Exit Interview Completed:</label>
+					</div>
+					<div class="answer">
+						<input name="dateExitInterviewCompleted" id="dateExitInterviewCompleted" class="demo-test-date" value=""/>
+					</div>
+				</div>
+				<div class="questionAnswer">
+					<div class="question">
+						<label for="text-1">Foster Provider:</label>
+					</div>
+					<div class="answer">
+						<div id="fosterProviderDiv" data-role="fieldcontain">
+							<select name="fosterProvider" id="fosterProvider">
+								<option value=""> Select Foster Provider </option>
+								<option value="Foster Home"> Foster Home </option>
+								<option value="Option2"> Option2 </option>
+								<option value="Option3"> Option3 </option>
+							</select>
+						</div>
+					</div>
+				</div>
+				
+				
+				<div class="fosterContent" style="display:none">
+					<div class="questionAnswer">
+						<div class="question">
+							<label for="text-1">Name of Foster Home/Facility:</label>
+						</div>
+						<div class="answer">
+							<input type="text" name="fosterHome" id="fosterHome" value=""/>
+						</div>
+					</div>
+					<div class="questionAnswer">
+						<div class="question">
+							<label for="text-1">Agency:</label>
+						</div>
+						<div class="answer">
+							<input type="text" name="agency" id="agency" value=""/>
+						</div>
+					</div>
+					<fieldset data-role="controlgroup" data-type="horizontal" id="countryFieldset">
+						 <div class="questionAnswer">
+							<div class="question">
+								<legend>County:</legend>
+							</div>
+							<div class="answer">
+								<input data-theme="c" name="radio_choice_country" id="radio-choice-h-2a" value="broward" type="radio" >
+								<label for="radio-choice-h-2a">Broward</label>
+								<input data-theme="c" name="radio_choice_country" id="radio-choice-h-2b" value="palm_beach" type="radio">
+								<label for="radio-choice-h-2b">Palm Beach</label>
+							</div>
+						</div>
+					</fieldset>
+					<div class="questionAnswer">
+						<div class="question">					
+							<label for="text-1">Foster Home/Facility Address:</label>
+						</div>
+						<div class="answer">
+							<input type="text" name="fosterAddress" id="fosterAddress" value=""/>
+						</div>
+					</div>
+				</div>
+				<div class="questionAnswer">
+					<div class="question">	
+						<label for="text-1">Date Child Moved:</label>
+					</div>
+					<div class="answer">
+						<input name="date_child_moved" id="date_child_moved" class="demo-test-date" />
+					</div>
+				</div>				
+				<div class="questionAnswer">
+					<div class="question">	
+						<label for="text-1">Name of Staff Completing Form:</label>
+					</div>
+					<div class="answer">
+						<input type="text" name="nameStaffCompletingForm" id="nameStaffCompletingForm" value=""/>
+					</div>
+				</div>	
+				<div class="questionAnswer">
+					<div class="question">	
+						<label for="text-1">Title of Staff Completing Form:</label>
+					</div>
+					<div class="answer">
+						<input type="text" name="titleOfStaffCompletingForm" id="titleOfStaffCompletingForm" value=""/>
+					</div>
+				</div>	
+				<div class="questionAnswer">
+					<div class="question">
+						<label for="text-1">Location of Interview:</label>
+					</div>
+					<div class="answer">
+						<input type="text" name="locationOfInterview" id="locationOfInterview" value=""/>
+					</div>
+				</div>
+				<a href="" id="btnExitInterview" data-role="button">Exit Interview</a>
+				<a href="" id="btnCaseManagerReview" style="display:none" data-role="button"> Case Manager Review </a>
+				
+			</div>
+			<!-- Footer -->
+			<div data-role="footer" data-position="fixed">
+				<a data-role="button" id="submit">Submit</a>
+				<a data-role="button" id="save">Save</a>
+				<a data-role="button" id="exit">Exit</a>
+			</div>
+		</div>
+		
 		<script>
+			var selectCaseVar			= $("#selectCase");
+			var selectParticipantVar	= $("#selectParticipant");
+			
 			try {
 				$(function() {
 					$("#submitLogin").click(function(){
-						var username = $("#username").val();
-						var password = $("#password").val();
+						var username = $("#username").val().toLowerCase();
+						var password = $("#password").val().toLowerCase();
 						if(password != "" && username != ""){
 							
-							var wsUrl = "http://116.72.253.58/ChildNet1/controller.asmx?Method=getAssignedCaseList";
+							/*var wsUrl = "http://116.72.253.58/ChildNet1/controller.asmx?Method=getAssignedCaseList";
 						
 							var loginXml = "<?xml version='1.0' encoding='UTF-8' standalone='yes'?><mobileLogonForm><username>"+username+"</username><password>"+password+"</password></mobileLogonForm>";
 						
-							var InputXML ="<?xml version='1.0' encoding='UTF-8' standalone='yes'?><assignedCaseListInputForm><loginId>SL10017</loginId></assignedCaseListInputForm>";
+							var InputXML ="<?xml version='1.0' encoding='UTF-8' standalone='yes'?><assignedCaseListInputForm><loginId>SL10017</loginId></assignedCaseListInputForm>"; 
+
 						
 							//alert("Thank you "+username + " for login." );
 							$.ajax({
@@ -59,24 +237,129 @@
 								data: {LoginXML : loginXml , InputXML : InputXML},
 								success: processSuccess,
 								error: processError
-							});
+							}); */
+							if(password=="admin" && username=="admin"){
+								commonDialogBoxChangePage("page2","Message", "Login successfully.",false);
+							}else{
+								commonErrorDalogBox("Error","Invalid username or password.");
+							}
 						}else{
-							alert("Please provide both username and password");
+							commonErrorDalogBox("Error","Please provide both username and password");
+							//alert("Please provide both username and password");
 						}
+					});
+					
+					$("#submitCaseParicipant").click(function(){
+						var selectCaseValue 		= selectCaseVar.val();
+						var selectParticipantValue 	= selectParticipantVar.val();
+						if(selectCaseValue!="" && selectParticipantValue !="" ){
+							showChildInformationForm();
+							/*$.ajax({ url: "selectCaseParticipant.php",
+									 type : "POST",
+									 data: {selectCase : selectCaseValue , selectParticipant : selectParticipantValue},
+									 success: function(msg){
+										if(msg == "success"){
+											showChildInformationForm();
+										}else if(msg =="error"){
+											displayErrorMessage("Please fill correct username and password.");
+											commonErrorDalogBox("Error","Please fill correct username and password.");
+										}
+									}
+							});*/
+						}else{
+							var message = "";
+							if(selectCaseValue == ""){
+								message = " Case";
+							}
+							if(selectParticipantValue == ""){
+								if(message.length > 0){
+									message += " & ";
+								}
+								message += "Participant";
+							}
+							var fullMessage = "Please select "+ message + " first";
+							//displayErrorMessage(fullMessage);
+							commonErrorDalogBox("Error",fullMessage);
+						}
+						
 					});
 				});
 			} catch (error) {
 				console.error("Your javascript has an error: " + error);
 			}
 			
-			function processSuccess(data, status, req) {
+			/*function processSuccess(data, status, req) {
 				if (status == "success")
 					//$("#response").text($(req.responseXML).find("HelloResult").text());
 					alert("success "+req.responseText + " " + status);
 			}
 			function processError(data, status, req) {
 				alert(req.responseText + " " + status);
-			}  
+			} */ 
+			
+			/* Start of Page 2 functionality */
+			function showChildInformationForm(){
+				$.mobile.changePage("#page3");
+			}
+			/* End of Page 2 functionality */
+			/* Start of Page 3 functionality */
+			/* End of Page 3 functionality */
+			
+			/* Start of Common functionality */
+			function commonDialogBoxChangePage(page,header, message,confirm){
+				if(confirm){
+					$('<div>').simpledialog2({
+						mode: 'button',
+						headerText: header,
+						headerClose: true,
+						buttonPrompt: message,
+						buttons : {
+						  'OK': {
+							click: function () { 
+									$.mobile.changePage("#"+page);	 
+								}
+							},
+						  'Cancel': {
+								click: function () { 
+								  $('#buttonoutput').text('Cancel');
+								},
+								icon: "delete",
+								theme: "c"
+							}
+						}
+					  });
+				}else{
+					$('<div>').simpledialog2({
+						mode: 'button',
+						headerText: header,
+						headerClose: true,
+						buttonPrompt: message,
+						buttons : {
+							'OK': {
+								click: function () { 
+									$.mobile.changePage("#"+page);	 
+								}
+							}
+						}
+					  });
+				}
+			}
+			function commonErrorDalogBox(header,message){
+				$('<div>').simpledialog2({
+					mode: 'button',
+					headerText: header,
+					headerClose: true,
+					buttonPrompt: message,
+					buttons : {
+						'OK': {
+							click: function () { 
+								//$.mobile.changePage("#"+page);	 
+							}
+						}
+					}
+				});
+			}
+		/* End of Common functionality */
 		</script>
 	</body>
 </html>
