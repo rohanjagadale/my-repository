@@ -224,8 +224,31 @@
 		</div>
 		
 		<script>
+			var submitLoginVar 			= $("#submitLogin");
+			var submitCaseParicipantVar = $("#submitCaseParicipant");
+			var btnExitInterviewVar	 	= $("#btnExitInterview");
+			var btnCaseManagerReviewVar = $("#btnCaseManagerReview");
+			var usernameVar				= $("#username");
+			var passwordVar				= $("#password");
 			var selectCaseVar			= $("#selectCase");
 			var selectParticipantVar	= $("#selectParticipant");
+			var page1Var				= $("#page1");
+			var page2Var				= $("#page2");
+			
+			var fosterHomeVar			= $("#fosterHome");
+			var fosterProviderVar		= $("#fosterProvider");
+			var fosterContentDivVar		= $(".fosterContent");
+			var explainVar				= $(".explain");
+			
+			var exitInterviewExplainSubmitVar	= $("#exitInterviewExplainSubmit");
+			var ExitInterviewFormCommonYesNoExplainVar = $("#ExitInterviewFormCommonYesNoExplain");
+			var caseManagerCommonCommentVar 	= $("#caseManagerCommonComment");
+			var caseManagerExplainSubmitVar		= $("#caseManagerExplainSubmit");
+			var localStorageUsername 	=  "username";
+			var ExitInterviewCount		= 1;
+			var questionIdVar = answerVar = answerExplainVar = addMoreAnswerId =  answerType = formType = currentSign = sign1Json = sign2Json = sign1base64 = sign2base64 ="";
+			var demoGraphicFormValue = "";
+			
 			var curr = new Date().getFullYear();
             var opt = {
                 'date': {
@@ -299,7 +322,7 @@
 					/* End of Page 1 Events */
 					
 					/* Start of Page 2 Events */
-					$("#submitCaseParicipant").click(function(){
+					submitCaseParicipantVar.click(function(){
 						var selectCaseValue 		= selectCaseVar.val();
 						var selectParticipantValue 	= selectParticipantVar.val();
 						if(selectCaseValue!="" && selectParticipantValue !="" ){
@@ -334,6 +357,17 @@
 						
 					});
 				});
+				
+				fosterProviderVar.change(function(){
+						var fosterText = $(this).val();
+						if(fosterText == "Foster Home"){
+							btnCaseManagerReviewVar.show();
+							fosterContentDivVar.show();
+						}else{
+							fosterContentDivVar.hide();
+							btnCaseManagerReviewVar.hide();
+						}
+					});
 				/* End of Page 2 Events */
 				/* Start of Common Events */
 				$('.demo-test-date').scroller('destroy').scroller($.extend(opt['date'], {

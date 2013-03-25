@@ -3,13 +3,15 @@
 <!-- config.xml reference: https://build.phonegap.com/docs/config-xml -->
 <widget xmlns     = "http://www.w3.org/ns/widgets"
         xmlns:gap = "http://phonegap.com/ns/1.0"
-		id 		  = "com.phonegap.exit-interview"
+		id 		  = "com.phonegap.test-application"
 		version	  = "1.0.0">
 		
-		<name> Exit Interview </name>
-		<description> Application of Exit Interview </description>
+		<!-- <name> Exit Interview </name> -->
+		<name> Test Application </name>
+		<!-- <description> Application of Exit Interview </description> -->
+		<description> Test Application </description>
 		<author href="https://build.phonegap.com" email="support@phonegap.com">
-			Hardeep Shoker 
+			Rohan
 		</author>
 		
 		<!-- Customize your app and platform with the preference element. -->
