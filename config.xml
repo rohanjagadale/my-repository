@@ -6,7 +6,7 @@
 		id 		  = "com.phonegap.exit-interview"
 		version	  = "1.0.0">
 		
-		<name> Exit Interview <name>
+		<name> Exit Interview </name>
 		<description> Application of Exit Interview </description>
 		<author href="https://build.phonegap.com" email="support@phonegap.com">
 			Hardeep Shoker 
